@@ -1,0 +1,20 @@
+{
+  "name": "bg-video",
+  "repo": "bmcmahen/bg-video",
+  "description": "set the background of an element with a video",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/classes": "*",
+    "component/events": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "bg-video.css"
+  ]
+}
