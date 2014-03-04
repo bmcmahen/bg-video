@@ -2,11 +2,15 @@
   "name": "bg-video",
   "repo": "bmcmahen/bg-video",
   "description": "set the background of an element with a video",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "keywords": [],
   "dependencies": {
     "component/classes": "*",
-    "component/events": "*"
+    "component/events": "*",
+    "yields/is-touch": "0.0.1",
+    "component/each": "*",
+    "component/path": "*",
+    "timoxley/to-array": "*"
   },
   "development": {},
   "license": "MIT",

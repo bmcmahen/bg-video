@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel='stylesheet' href='build/build.css'>
+  <style>
+  #background {
+    width: 100%;
+    height: 100%;
+  }
+
+  body,
+  html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<div id='background'>
+<p> paragrapph here</p>
+</div>
+
+<script src='build/build.js'></script>
+<script>
+var BGVideo = require('bg-video');
+var srcs = [
+  'http://media.w3.org/2010/05/sintel/trailer.mp4',
+  'http://media.w3.org/2010/05/sintel/trailer.webm',
+  'http://media.w3.org/2010/05/sintel/trailer.ogv'
+];
+var vid = new BGVideo(document.getElementById('background'), srcs);
+vid.poster('http://media.w3.org/2010/05/sintel/poster.png');
+vid.loop();
+vid.autoplay();
+vid.append();
+
+</script>
+</body>
+</html>

@@ -9,8 +9,24 @@
 
     $ component install bmcmahen/bg-video
 
-## API
+## Example
 
+Note: currently this library clones the contents of `el` using innerHTML, which in turn removes any event listeners for elements contained within `el`. Either use event delegation, or attach event listeners after constructing your background-video. 
+
+```javascript
+var BGVideo = require('bg-video');
+var srcs = [
+  'http://media.w3.org/2010/05/sintel/trailer.mp4',
+  'http://media.w3.org/2010/05/sintel/trailer.webm',
+  'http://media.w3.org/2010/05/sintel/trailer.ogv'
+];
+var el = document.getElementById('background');
+var vid = new BGVideo(el, srcs)
+  .poster('http://media.w3.org/2010/05/sintel/poster.png')
+  .loop()
+  .autoplay()
+  .append();
+```
 
 
 ## License

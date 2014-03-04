@@ -24,3 +24,8 @@
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
+
+.background-video-poster {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
