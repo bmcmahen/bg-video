@@ -24,10 +24,16 @@
 
 <div id='background'>
 <p> paragrapph here</p>
+<button id='hi'>hello</button>
 </div>
 
 <script src='build/build.js'></script>
 <script>
+var btn = document.getElementById('hi');
+btn.onclick = function(e){
+  console.log('hello world');
+}
+
 var BGVideo = require('bg-video');
 var srcs = [
   'http://media.w3.org/2010/05/sintel/trailer.mp4',

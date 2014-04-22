@@ -41,10 +41,10 @@ function BackgroundVideo(el, url){
     this.parent.appendChild(this.video);
 
     this.originalContents = document.createDocumentFragment();
-
-    each(el.children, function(child){
-      this.originalContents.appendChild(child.cloneNode(true));
-    }.bind(this));
+    var childs = el.children;
+    for (var i = childs.length -1; i >= 0; i--) {
+      this.originalContents.appendChild(childs[i]);
+    }
 
     el.cloneNode(true);
     this.overlay = document.createElement('div');

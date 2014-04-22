@@ -11,8 +11,6 @@
 
 ## Example
 
-Note: currently this library clones the contents of `el` using innerHTML, which in turn removes any event listeners for elements contained within `el`. Either use event delegation, or attach event listeners after constructing your background-video. 
-
 ```javascript
 var BGVideo = require('bg-video');
 var srcs = [
