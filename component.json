@@ -2,7 +2,7 @@
   "name": "bg-video",
   "repo": "bmcmahen/bg-video",
   "description": "set the background of an element with a video",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "keywords": [],
   "dependencies": {
     "component/classes": "*",
