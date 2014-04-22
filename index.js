@@ -39,10 +39,17 @@ function BackgroundVideo(el, url){
     });
     classes(this.video).add('background-video');
     this.parent.appendChild(this.video);
-    this.originalElement = el.cloneNode(true);
+
+    this.originalContents = document.createDocumentFragment();
+
+    each(el.children, function(child){
+      this.originalContents.appendChild(child.cloneNode(true));
+    }.bind(this));
+
+    el.cloneNode(true);
     this.overlay = document.createElement('div');
     classes(this.overlay).add('background-video-content');
-    this.overlay.appendChild(this.originalElement);
+    this.overlay.appendChild(this.originalContents);
     this.bind();
   }
 };
