@@ -8,6 +8,7 @@ var isTouch = require('is-touch')();
 var toArray = require('to-array');
 var path = require('path');
 var each = require('each');
+var empty = require('empty');
 
 /**
  * Expose BackgroundVideo
@@ -38,10 +39,10 @@ function BackgroundVideo(el, url){
     });
     classes(this.video).add('background-video');
     this.parent.appendChild(this.video);
-    this.originalHTML = el.innerHTML;
+    this.originalElement = el.cloneNode(true);
     this.overlay = document.createElement('div');
     classes(this.overlay).add('background-video-content');
-    this.overlay.innerHTML = this.originalHTML;
+    this.overlay.appendChild(this.originalElement);
     this.bind();
   }
 };
@@ -112,7 +113,7 @@ BackgroundVideo.prototype.autoplay = function(){
 // current contents of the element into its own element.
 BackgroundVideo.prototype.append = function(el){
   if (this.video){
-    this.el.innerHTML = '';
+    empty(this.el);
     this.parent.appendChild(this.overlay);
     this.el.insertBefore(this.parent, this.el.firstChild);
   }
